@@ -49,6 +49,14 @@ exports.register = async(req, res) => {
     }
 }
 
+/**
+ * 
+ * @param {email, otp} req 
+ * @param {*} res 
+ * @returns 
+ * @method POST
+ * @author Daniel Ozeh hello@danielozeh.com.ng
+ */
 exports.verifyEmail = async (req, res) => {
     const {otp, email} = req.body
     try {
@@ -78,6 +86,14 @@ exports.verifyEmail = async (req, res) => {
     }
 }
 
+/**
+ * 
+ * @param {email} req 
+ * @param {*} res 
+ * @returns 
+ * @method POST
+ * @author Daniel Ozeh hello@danielozeh.com.ng
+ */
 exports.resendEmail = async (req, res) => {
     const {email} = req.body
     try {
@@ -124,6 +140,14 @@ exports.resendEmail = async (req, res) => {
     }
 }
 
+/**
+ * 
+ * @param {email, password} req 
+ * @param {*} res 
+ * @returns 
+ * @method POST
+ * @author Daniel Ozeh hello@danielozeh.com.ng
+ */
 exports.login = async (req, res) => {
     const {email, password} = req.body
     const query = { email: email }
@@ -161,6 +185,14 @@ exports.login = async (req, res) => {
     })
 }
 
+/**
+ * 
+ * @param {email} req 
+ * @param {*} res 
+ * @returns 
+ * @method POST
+ * @author Daniel Ozeh hello@danielozeh.com.ng
+ */
 exports.forgotPassword = async (req, res) => {
     const {email} = req.body
     const query = {email}
@@ -192,6 +224,14 @@ exports.forgotPassword = async (req, res) => {
     })
 }
 
+/**
+ * 
+ * @param {otp, email, password} req 
+ * @param {*} res 
+ * @returns 
+ * @method POST
+ * @author Daniel Ozeh hello@danielozeh.com.ng
+ */
 exports.resetPassword = async (req, res) => {
     const {otp, password, email} = req.body
     const verification = await Verification.findOne({code: otp, email}).lean()

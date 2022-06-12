@@ -77,7 +77,7 @@ exports.findUser = async(req, res) => {
                     last_name: {$regex: name, $options: 'i'}
                 },
                 { 
-                    username: {$regex: name, $options: 'i'}
+                    email: {$regex: name, $options: 'i'}
                 }
             ]
         }, pageOptions)

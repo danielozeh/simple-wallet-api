@@ -45,7 +45,7 @@ This module consist of
 3. Find users (by first name, last name and email address)
 4. Check if email exists
 
-*** Wallet ***
+***Wallet***
 1. Generate Transaction Reference - This generates a reference that will be passed on to the payment gateway
 2. Payment Verification - After payment is successful, it is important to verify payment before passing value to customers (a webhook url is also included if this endpoint is not used)
 3. Wallet History - Get all transactions performed (a filter option is also included) - Data is paginated at default to 25

@@ -1,0 +1,42 @@
+{
+  "name": "simple-wallet-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon src/index.js",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:docs": "apidoc -i src/ -o docs/apidoc",
+    "lint": "npx eslint **/src/**/*.js",
+    "lint:files": "npx eslint **/src/**/*.js | grep -E '^[\\w/].*\\.js'",
+    "lint:files:open": "code $(npx eslint **/src/**/*.js | grep -E '^[\\w/].*\\.js')",
+    "prettier": "npx prettier --write **/src/**/*.js"
+  },
+  "keywords": [],
+  "author": "Daniel Ozeh (hello@danielozeh.com.ng)",
+  "license": "ISC",
+  "dependencies": {
+    "amqp-connection-manager": "^4.1.2",
+    "amqplib": "^0.8.0",
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "moment": "^2.29.2",
+    "mongoose": "^6.2.10",
+    "mongoose-aggregate-paginate-v2": "^1.0.6",
+    "mongoose-paginate-v2": "^1.6.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.51.0",
+    "eslint": "^8.13.0",
+    "nodemon": "^2.0.15"
+  }
+}

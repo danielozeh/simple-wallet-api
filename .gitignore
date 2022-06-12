@@ -1,0 +1,7 @@
+node_modules
+.env
+.env.dev
+.idea
+package-lock.json
+docs/
+responses/
